@@ -10,15 +10,9 @@
     <button id="theme-button" onclick="toggleTheme()">🌙</button>
     <h1>Postez vos messages</h1>
     <button id="update-button" onclick="getAllMsgs()">Mise à Jour</button>
-    <ul id="messages">
-      <li>Message 1</li>
-      <li>Message 2</li>
-      <li>Message 3</li>
-      <li>Message 4</li>
-      <li>Message 5</li>
-    </ul>
+    <ul id="messages"></ul>
 
-    <form id="message-form" action="" method="post" onsubmit="postMsg(event)">
+    <form id="message-form" onsubmit="postMsg(event)">
       <input id="form-input" type="text" placeholder="username"></input>
       <textarea id="form-textarea" required></textarea>
       <button id="send-button" type="submit">Envoyer</button>

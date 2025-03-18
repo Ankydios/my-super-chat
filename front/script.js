@@ -46,12 +46,15 @@ function toggleTheme() {
     : "🌙";
 }
 
-function postMsg(e) {
+const postMsg = async (e) => {
   e.preventDefault();
   const msg = document.getElementById("form-textarea").value;
   const username = document.getElementById("form-input").value;
   fetch(`${API_URL}/msg/post/${msg}?username=${username}`)
-  getAllMsgs();
+  .then(() => {
+    getAllMsgs()
+  });
+
 }
 
 getAllMsgs();
