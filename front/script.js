@@ -1,4 +1,4 @@
-const API_URL = "http://my-super-chat-back.onrender.com";
+const API_URL = "https://my-super-chat-back.onrender.com";
 
 function getAllMsgs() {
   fetch(`${API_URL}/msg/getAll`)
@@ -50,7 +50,7 @@ function postMsg(e) {
   e.preventDefault();
   const msg = document.getElementById("form-textarea").value;
   const username = document.getElementById("form-input").value;
-  fetch(`http://localhost:8080/msg/post/${msg}?username=${username}`)
+  fetch(`${API_URL}/msg/post/${msg}?username=${username}`)
   getAllMsgs();
 }
 
