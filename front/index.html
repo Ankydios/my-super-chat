@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Ma super messagerie</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <button id="theme-button" onclick="toggleTheme()">🌙</button>
+    <h1>Postez vos messages</h1>
+    <button id="update-button" onclick="getAllMsgs()">Mise à Jour</button>
+    <ul id="messages">
+      <li>Message 1</li>
+      <li>Message 2</li>
+      <li>Message 3</li>
+      <li>Message 4</li>
+      <li>Message 5</li>
+    </ul>
+
+    <form id="message-form" action="" method="post" onsubmit="postMsg(event)">
+      <input id="form-input" type="text" placeholder="username"></input>
+      <textarea id="form-textarea" required></textarea>
+      <button id="send-button" type="submit">Envoyer</button>
+    </form>
+  </body>
+  <script src="script.js"></script>
+</html>
