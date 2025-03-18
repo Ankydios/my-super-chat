@@ -1,5 +1,7 @@
+const API_URL = "http://my-super-chat-back.onrender.com";
+
 function getAllMsgs() {
-  fetch('http://localhost:8080/msg/getAll')
+  fetch(`${API_URL}/msg/getAll`)
   .then(function(response) {
     return response.json();
   })
